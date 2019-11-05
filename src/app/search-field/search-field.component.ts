@@ -13,4 +13,8 @@ export class SearchFieldComponent implements OnInit {
 
     ngOnInit() {
     }
+
+    searchGiphyHandler(searchInput: HTMLInputElement): void {
+        console.log(`You just clicked me! ${searchInput.value}`);
+    }
 }
