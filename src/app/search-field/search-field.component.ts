@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { SearchService } from '../shared/search.service';
 
 @Component({
     selector: 'app-search-field',
-    // selector: 'app-root',
     templateUrl: './search-field.component.html',
     styleUrls: ['./search-field.component.css']
 })
 export class SearchFieldComponent implements OnInit {
-    name = 'Search Field';
-    constructor() {
+    searchWord: string;
+    gifs: any;
+
+    constructor(private searchService: SearchService) {
     }
 
     ngOnInit() {
     }
 
-    searchGiphyHandler(searchInput: HTMLInputElement): void {
-        console.log(`You just clicked me! ${searchInput.value}`);
+    showGifs() {
+        this.searchService.getGifs(this.searchWord).subscribe(
+            gif => {
+                this.gifs = gif.data;
+            },
+            error => console.warn(error)
+        );
     }
 }
