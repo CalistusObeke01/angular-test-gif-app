@@ -1,5 +1,12 @@
 
-<div>
-    <!-- Implement result list here  -->
+<!-- <div>
+    Implement result list here 
     Results List
-</div> 
+</div>  -->
+
+
+<div *ngIf="result" class="container display-list">
+    <div *ngFor="let gif of result" class="col-md-3" >
+        <img class="img-thumbnail img-size" src="{{gif.images.original.url}}"> 
+    </div>
+</div>

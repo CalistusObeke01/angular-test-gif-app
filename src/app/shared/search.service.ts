@@ -4,8 +4,9 @@ import { catchError, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
 interface IGifs {
-    data: Array<object>;
+  data: Array<object>;
 }
+
 @Injectable({
   providedIn: 'root'
 })

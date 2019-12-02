@@ -1,0 +1,13 @@
+.display-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-top: 50px;
+    outline: 1px solid #efefef;
+    padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.img-size {
+    width: 100%;
+    height: 140px;
+}

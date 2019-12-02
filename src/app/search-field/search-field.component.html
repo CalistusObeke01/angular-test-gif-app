@@ -20,10 +20,7 @@
     </div>
 </div>
 
+<app-results-list [result]="gifs"></app-results-list>
 
-<div *ngIf="gifs" class="container display-list">
-    <div *ngFor="let gif of gifs" class="col-md-3 mb-5">
-        <img class="img-thumbnail img-size" src="{{gif.images.original.url}}"> 
-    </div>
-</div>
+
 
