@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SearchService } from '../shared/search.service';
-import { ResultsListComponent } from '../result-list/search-field.component.ts';
+
 
 @Component({
     selector: 'app-search-field',

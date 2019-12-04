@@ -5,6 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './results-list.component.html',
   styleUrls: ['./results-list.component.css']
 })
+
+
 export class ResultsListComponent implements OnInit {
   @Input() result;
 
@@ -12,6 +14,4 @@ export class ResultsListComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
 }
